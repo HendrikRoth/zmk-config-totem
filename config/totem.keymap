@@ -10,11 +10,9 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -28,6 +26,7 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
             bindings = <&kp>, <&kp>;
         };
+
         hmrc: homerow_mod_rctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -38,6 +37,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>;
             bindings = <&kp>, <&kp>;
         };
+
         hmls: homerow_mod_lshift {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -48,6 +48,7 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
             bindings = <&kp>, <&kp>;
         };
+
         hmrs: homerow_mod_rshift {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -58,6 +59,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>;
             bindings = <&kp>, <&kp>;
         };
+
         hmg: homerow_mod_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -67,6 +69,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
         hmla: homerow_mod_lalt {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -76,6 +79,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
         hmra: homerow_mod_ralt {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -255,50 +259,50 @@
         base {
             label = "base";
             bindings = <
-                       &kp Q  &kp W         &kp F          &kp P          &kp B        &kp J        &kp L          &kp U          &kp Y           &kp SEMI
-                       &kp A  &hmla LALT R  &hmls LSHFT S  &hmlc LCTRL T  &kp G        &kp M        &hmrc RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
-            &kp MINUS  &kp Z  &hmra RALT X  &kp C          &kp D          &kp V        &kp K        &kp H          &kp COMMA      &hmra RALT DOT  &kp FSLH  &kp BSLH
-                                            &none          &none          &lt 1 RET    &lt 2 SPACE  &none          &none
+           &kp Q  &kp W         &kp F          &kp P          &kp B        &kp J        &kp L          &kp U          &kp Y           &kp SEMI
+           &kp A  &hmla LALT R  &hmls LSHFT S  &hmlc LCTRL T  &kp G        &kp M        &hmrc RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
+&kp MINUS  &kp Z  &hmra RALT X  &kp C          &kp D          &kp V        &kp K        &kp H          &kp COMMA      &hmra RALT DOT  &kp FSLH  &kp BSLH
+                                &kp A          &kp B          &lt 1 RET    &lt 2 SPACE  &none          &none
             >;
         };
 
         nav {
             label = "nav";
             bindings = <
-                   &kp ESC   &kp PSCRN        &kp UP    &kp INS    &kp PG_UP    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                   &kp HOME  &kp LEFT         &kp DOWN  &kp RIGHT  &kp END      &kp K_APP     &kp RCTRL     &kp RSHFT     &kp LALT      &kp RGUI
-            &none  &kp SLCK  &kp PAUSE_BREAK  &kp BSPC  &kp DEL    &kp PG_DN    &none         &bt BT_PRV    &bt BT_NXT    &kp RALT      &bt BT_CLR    &none
-                                              &none     &none       &none       &mo 3         &none         &none
+       &kp ESC   &kp PSCRN        &kp UP    &kp INS    &kp PG_UP    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+       &kp HOME  &kp LEFT         &kp DOWN  &kp RIGHT  &kp END      &kp K_APP     &kp RCTRL     &kp RSHFT     &kp LALT      &kp RGUI
+&none  &kp SLCK  &kp PAUSE_BREAK  &kp BSPC  &kp DEL    &kp PG_DN    &none         &bt BT_PRV    &bt BT_NXT    &kp RALT      &bt BT_CLR    &none
+                                  &none     &none      &none        &mo 3         &none         &none
             >;
         };
 
         num {
             label = "num";
             bindings = <
-                   &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)      &kp RS(N5)    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-                   &kp N1      &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
-            &none  &kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR        &kp LBKT      &kp RBKT    &kp RPAR        &kp COMMA       &hmra RALT DOT  &kp BSLH    &none
-                                               &none           &none           &tog 4        &none       &none           &none
+       &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)      &kp RS(N5)    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+       &kp N1      &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
+&none  &kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR        &kp LBKT      &kp RBKT    &kp RPAR        &kp COMMA       &hmra RALT DOT  &kp BSLH    &none
+                                   &none           &none           &tog 4        &none       &none           &none
             >;
         };
 
         fun {
             label = "fun";
             bindings = <
-                   &kp F1    &kp F2    &kp F3     &kp F4     &kp F5     &kp F6   &kp F7     &kp F8     &kp F9    &kp F10
-                   &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp F11    &kp F12  &kp RCTRL  &kp RSHFT  &kp LALT  &kp RGUI
-            &none  &none     &kp RALT  &none      &none      &none      &none    &none      &none      &kp RALT  &none     &none
-                                       &none      &none      &none      &none    &none      &none
+       &kp F1    &kp F2    &kp F3     &kp F4     &kp F5     &kp F6   &kp F7     &kp F8     &kp F9    &kp F10
+       &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp F11    &kp F12  &kp RCTRL  &kp RSHFT  &kp LALT  &kp RGUI
+&none  &none     &kp RALT  &none      &none      &none      &none    &none      &none      &kp RALT  &none     &none
+                           &none      &none      &none      &none    &none      &none
             >;
         };
 
         pad {
             label = "pad";
             bindings = <
-		           &to 0  &none  &none     &none    &none      &kp FSLH   &kp N7  &kp N8  &kp N9  &kp MINUS
-                   &none  &none  &none     &none    &none      &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
-            &none  &none  &none  &kp BSPC  &kp DEL  &none      &kp N0     &kp N1  &kp N2  &kp N3  &none      &none
-                                 &none     &none    &kp RET    &kp SPACE  &none   &none 
+       &to 0  &none  &none     &none    &none      &kp FSLH   &kp N7  &kp N8  &kp N9  &kp MINUS
+       &none  &none  &none     &none    &none      &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
+&none  &none  &none  &kp BSPC  &kp DEL  &none      &kp N0     &kp N1  &kp N2  &kp N3  &none      &none
+                     &none     &none    &kp RET    &kp SPACE  &none   &none
             >;
         };
     };
